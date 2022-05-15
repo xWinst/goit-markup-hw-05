@@ -346,12 +346,6 @@ ul {
     transition: color 250ms var(--timing), background-color 250ms var(--timing);
 }
 
-.social-link:hover,
-.social-link:focus {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-}
-
 /* Иконка соцальной сети */
 .social-icon {
     width: 20px;
@@ -453,6 +447,13 @@ ul {
 .footer .social-link {
     color: var(--bg-color);
     background-color: var(--secondary-icon-bg-color);
+}
+
+/* Иконки соц сетей при ховере(фокусе) */
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
 }
 
 /* Список кнопок фильтра */
