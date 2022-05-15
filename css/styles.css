@@ -611,7 +611,8 @@ ul {
     background-color: var(--box-shadow-color4);
 
     opacity: 1;
-    transition: opacity 250ms var(--timing);
+    transition: opacity 250ms var(--timing),
+                visibility 250ms var(--timing);
 }
 
 .backdrop.is-hidden {
@@ -621,7 +622,7 @@ ul {
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.4);
 }
 
 .modal {
@@ -635,7 +636,8 @@ ul {
         0px 2px 1px var(--box-shadow-color4);
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms var(--timing);
+    transition: transform 250ms var(--timing),
+                opacity 250ms var(--timing);
 }
 
 /* Кнопка закрытия */
