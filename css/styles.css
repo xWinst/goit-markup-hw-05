@@ -545,7 +545,7 @@ ul {
 .project-item {
     box-shadow: none;
 
-    transition: box-shadow 2500ms var(--timing);
+    transition: box-shadow 250ms var(--timing);
 
     /*  По идее раз делаем переход на всё, то нужно 
         сделать переход и для border, но сам border
