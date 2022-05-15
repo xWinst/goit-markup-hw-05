@@ -22,7 +22,7 @@
     --gradient-color: rgba(47, 48, 58, 0.4);
     --secondary-icon-bg-color: rgba(255, 255, 255, 0.1);
     --overlay-bg-color: rgba(33, 155, 243, 0.9);
-    --timing: cubic-bezier(0.4, 0, 0.2, 1)
+    --timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Основной текст */
@@ -142,13 +142,12 @@ ul {
     color: var(--accent-color);
 }
 
-
 /* Подчёркивание текущей страницы */
 .nav-item {
     position: relative;
 }
 .current::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -29px;
@@ -190,7 +189,7 @@ ul {
     color: var(--bg-color);
     background-color: var(--additional-bg-color);
     background-image: linear-gradient(var(--gradient-color), var(--gradient-color)),
-                      url(../images/background.jpg);
+        url(../images/background.jpg);
 }
 
 .slogan {
@@ -289,7 +288,7 @@ ul {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    background-color: var(--additional-bg-color2); 
+    background-color: var(--additional-bg-color2);
     color: var(--bg-color);
 }
 
@@ -304,9 +303,8 @@ ul {
     text-align: center;
     background-color: var(--bg-color);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px var(--box-shadow-color2), 
-                0px 1px 1px var(--box-shadow-color3),
-                0px 2px 1px var(--box-shadow-color4);
+    box-shadow: 0px 1px 3px var(--box-shadow-color2), 0px 1px 1px var(--box-shadow-color3),
+        0px 2px 1px var(--box-shadow-color4);
 }
 
 .team-top-title {
@@ -335,7 +333,6 @@ ul {
     padding: 0 32px;
 }
 
-
 /* Ссылка на социальную сеть */
 .social-link {
     display: flex;
@@ -346,8 +343,7 @@ ul {
     color: var(--icon-color);
     border-radius: 50%;
 
-    transition: color 250ms var(--timing), 
-                background-color 250ms var(--timing);
+    transition: color 250ms var(--timing), background-color 250ms var(--timing);
 }
 
 .social-link:hover,
@@ -374,8 +370,7 @@ ul {
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 
-    transition: color 250ms var(--timing),
-                border-color 250ms var(--timing);
+    transition: color 250ms var(--timing), border-color 250ms var(--timing);
 }
 
 .customer-link:hover,
@@ -483,9 +478,8 @@ ul {
     box-shadow: none;
     cursor: pointer;
 
-    transition: color 250ms var(--timing), 
-                background-color 250ms var(--timing),
-                box-shadow 250ms var(--timing);
+    transition: color 250ms var(--timing), background-color 250ms var(--timing),
+        box-shadow 250ms var(--timing);
 }
 
 /* Переопределяем цвет кнопок фильтра при наведении мыши и
@@ -495,9 +489,8 @@ ul {
 .current-btn {
     background-color: var(--accent-color);
     color: var(--bg-color);
-    box-shadow: 0px 3px 1px var(--box-shadow-color5), 
-                0px 1px 2px var(--box-shadow-color6),
-                0px 2px 2px var(--box-shadow-color2);
+    box-shadow: 0px 3px 1px var(--box-shadow-color5), 0px 1px 2px var(--box-shadow-color6),
+        0px 2px 2px var(--box-shadow-color2);
 }
 
 /* Карточка проекта */
@@ -575,16 +568,14 @@ ul {
     margin-right: -2px;
     margin-bottom: -2px;
     border: 1px solid var(--border-color);
-    box-shadow: 0px 1px 1px var(--box-shadow-color2), 
-                0px 4px 4px var(--box-shadow-color7),
-                1px 4px 6px var(--box-shadow-color8);
+    box-shadow: 0px 1px 1px var(--box-shadow-color2), 0px 4px 4px var(--box-shadow-color7),
+        1px 4px 6px var(--box-shadow-color8);
 }
 
 /* Оверлай на карточке проекта */
 .project-img {
     position: relative;
     overflow: hidden;
-    
 }
 
 .project-overlay {
@@ -619,12 +610,18 @@ ul {
     height: 100%;
     background-color: var(--box-shadow-color4);
 
+    opacity: 1;
+    transition: opacity 250ms var(--timing);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal {
@@ -634,20 +631,21 @@ ul {
     width: 528px;
     height: 581px;
     background-color: var(--bg-color);
-    box-shadow: 0px 1px 3px var(--box-shadow-color2), 
-                0px 1px 1px var(--box-shadow-color3), 
-                0px 2px 1px var(--box-shadow-color4);
+    box-shadow: 0px 1px 3px var(--box-shadow-color2), 0px 1px 1px var(--box-shadow-color3),
+        0px 2px 1px var(--box-shadow-color4);
     border-radius: 4px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing);
 }
 
 /* Кнопка закрытия */
 
 .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
-    margin-top: 8px;
-    margin-left: 490px;
     padding: 0;
     background-color: transparent;
     border: 1px solid var(--box-shadow-color5);
